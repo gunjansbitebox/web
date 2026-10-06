@@ -94,6 +94,18 @@
     .promise div { padding:14px 0; border-bottom:1px solid var(--line); }
     .promise div:last-child { border-bottom:0; }
     footer { padding:30px 0 45px; color:var(--muted); text-align:center; font-size:.9rem; }
+    .platforms {
+      display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
+      margin-top:30px;
+    }
+    .platform-badge {
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 20px; border-radius:14px; color:#fff; font-weight:800;
+      font-size:1rem; box-shadow:0 10px 24px rgba(33,21,15,.14);
+    }
+    .platform-badge svg { width:22px; height:22px; flex-shrink:0; }
+    .platform-badge.swiggy { background:#fc8019; }
+    .platform-badge.zomato { background:#e23744; }
     @media (max-width: 760px) {
       .location { display:none; }
       .grid, .about { grid-template-columns:1fr; }
@@ -176,6 +188,16 @@
           We're getting ready to serve Indore. Our menu, launch offers and
           Swiggy &amp; Zomato ordering links are coming soon.
         </p>
+        <div class="platforms">
+          <span class="platform-badge swiggy">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 3.6 2.1 6.7 5.14 8.17L9.5 22l2.5-1.5 2.5 1.5 1.36-2.83C19.9 17.7 22 14.6 22 11c0-4.97-4.03-9-9-9zm0 2.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm-2.4 4.3-.9 1.4 2.9 1.9-1.6 2.5 1.4.9 2.5-3.9-2.9-1.9 1-1.6-1.4-.9-1 1.6z"/></svg>
+            Order on Swiggy — Coming Soon
+          </span>
+          <span class="platform-badge zomato">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1.1c-.4 3.1-2 5.7-4.4 7.3L17 18.3 15.6 20 12 16.9 8.4 20 7 18.3l3.5-4c-2.4-1.6-4-4.2-4.4-7.3H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2.5 4c.4 2.3 1.8 4.2 3.8 5.3l1.7-2-5.5-3.3zm11 0-5.5 3.3 1.7 2c2-1.1 3.4-3 3.8-5.3z"/></svg>
+            Order on Zomato — Coming Soon
+          </span>
+        </div>
       </section>
     </main>
 
