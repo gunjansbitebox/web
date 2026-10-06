@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Gunjan's BiteBox — delicious food, thoughtfully packed and coming soon across Indore." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
   <title>Gunjan's BiteBox | Coming Soon</title>
   <script>
     (function () {
@@ -70,11 +71,13 @@
     }
     .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:-.04em; }
     .mark {
-      width: 42px; height: 42px; border-radius: 13px;
-      display:grid; place-items:center; color:white; font-weight:900;
-      background: linear-gradient(135deg, var(--accent), var(--gold));
-      box-shadow: 0 10px 24px rgba(239,91,42,.22);
+      width: 63px; height: 63px; border-radius: 13px;
+      display:grid; place-items:center; overflow:hidden;
     }
+    .mark img { width:100%; height:100%; object-fit:contain; display:block; }
+    .mark .logo-dark { display:none; }
+    [data-theme="dark"] .mark .logo-light { display:none; }
+    [data-theme="dark"] .mark .logo-dark { display:block; }
     .brand span { font-size: 1.12rem; }
     .location { color: var(--muted); font-size:.9rem; }
     .hero {
@@ -177,7 +180,10 @@
   <div class="wrap">
     <nav>
       <div class="brand">
-        <div class="mark">B</div>
+        <div class="mark">
+          <img class="logo-light" src="assets/logo.png" alt="Gunjan's BiteBox logo" />
+          <img class="logo-dark" src="assets/logo-dark.png" alt="Gunjan's BiteBox logo" />
+        </div>
         <span>Gunjan's BiteBox</span>
       </div>
       <div class="nav-right">
